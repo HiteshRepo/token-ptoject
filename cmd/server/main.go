@@ -1,8 +1,7 @@
 package main
 
 import (
-	"github.com/hiteshrepo/token_project/internal/app/di"
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/hiteshrepo/token_project/internal/app/server/di"
 	"os"
 	"os/signal"
 	"syscall"
@@ -11,9 +10,6 @@ import (
 func main() {
 	app, err := di.InitializeApp()
 	check(err)
-
-	tracer.Start()
-	defer tracer.Stop()
 
 	app.Start(check)
 

@@ -2,7 +2,7 @@ package service
 
 import (
 	"github.com/hiteshrepo/token_project/internal/app/model"
-	"github.com/hiteshrepo/token_project/internal/app/repository"
+	"github.com/hiteshrepo/token_project/internal/app/server/repository"
 )
 
 type TokenService struct {

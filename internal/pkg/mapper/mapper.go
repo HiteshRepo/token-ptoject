@@ -17,7 +17,7 @@ func ProvideMapper() Mapper {
 }
 
 func (m *mapper) Token(t *tokenv1.Token) *model.Token {
-	return &model.Token {
+	return &model.Token{
 		Id:   t.Id,
 		Name: t.Name,
 		Low:  int64(t.Low),

@@ -2,7 +2,7 @@ package app
 
 import (
 	"fmt"
-	"github.com/hiteshrepo/token_project/internal/app/handler"
+	"github.com/hiteshrepo/token_project/internal/app/server/handler"
 	tokenv1 "github.com/hiteshrepo/token_project/internal/pkg/proto"
 	"google.golang.org/grpc"
 	"log"

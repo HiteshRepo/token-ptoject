@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 	"fmt"
-	"github.com/hiteshrepo/token_project/internal/app/mapper"
-	"github.com/hiteshrepo/token_project/internal/app/service"
+	"github.com/hiteshrepo/token_project/internal/app/server/service"
+	"github.com/hiteshrepo/token_project/internal/pkg/mapper"
 	tokenv1 "github.com/hiteshrepo/token_project/internal/pkg/proto"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

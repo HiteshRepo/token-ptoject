@@ -6,14 +6,14 @@
 package di
 
 import (
-	"github.com/hiteshrepo/token_project/internal/app"
-	"github.com/hiteshrepo/token_project/internal/app/handler"
-	"github.com/hiteshrepo/token_project/internal/app/mapper"
-	"github.com/hiteshrepo/token_project/internal/app/repository"
-	"github.com/hiteshrepo/token_project/internal/app/service"
-	"github.com/hiteshrepo/token_project/internal/pkg/config"
-	"github.com/hiteshrepo/token_project/internal/pkg/grpc"
 	"github.com/google/wire"
+	"github.com/hiteshrepo/token_project/internal/app/server/app"
+	"github.com/hiteshrepo/token_project/internal/app/server/grpc"
+	"github.com/hiteshrepo/token_project/internal/app/server/handler"
+	"github.com/hiteshrepo/token_project/internal/app/server/repository"
+	"github.com/hiteshrepo/token_project/internal/app/server/service"
+	"github.com/hiteshrepo/token_project/internal/pkg/config"
+	"github.com/hiteshrepo/token_project/internal/pkg/mapper"
 )
 
 var configSet = wire.NewSet(
