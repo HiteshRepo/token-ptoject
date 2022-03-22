@@ -32,6 +32,7 @@ var repoSet = wire.NewSet(
 )
 
 var serviceSet = wire.NewSet(
+	service.ProvideHashService,
 	service.ProvideTokenService,
 )
 

@@ -32,7 +32,8 @@ func InitializeApp() (*app.App, error) {
 		return nil, err
 	}
 	tokenRepository := repository.ProvideTokenRepository()
-	tokenService := service.ProvideTokenService(tokenRepository)
+	hashService := service.ProvideHashService()
+	tokenService := service.ProvideTokenService(tokenRepository, hashService)
 	mapperMapper := mapper.ProvideMapper()
 	tokenHandler := handler.ProvideTokenHandler(tokenService, mapperMapper)
 	appApp := &app.App{
@@ -51,6 +52,6 @@ var grpcSet = wire.NewSet(grpc.ProvideListener, grpc.ProvideGrpcServerOptions, g
 
 var repoSet = wire.NewSet(repository.ProvideTokenRepository)
 
-var serviceSet = wire.NewSet(service.ProvideTokenService)
+var serviceSet = wire.NewSet(service.ProvideHashService, service.ProvideTokenService)
 
 var handlerSet = wire.NewSet(handler.ProvideTokenHandler)

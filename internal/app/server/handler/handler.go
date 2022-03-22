@@ -11,6 +11,7 @@ import (
 )
 
 type TokenHandler struct {
+	tokenv1.UnimplementedTokenServiceServer
 	tickService *service.TokenService
 	mapper      mapper.Mapper
 }

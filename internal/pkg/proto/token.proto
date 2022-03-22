@@ -2,14 +2,16 @@ syntax = "proto3";
 
 package token.v1;
 
-option go_package = "token/v1;tokenv1";
+option go_package = "internal/pkg/proto";
 
 message Token {
   int64 id = 1;
   string name = 2;
-  int32 low = 3;
-  int32 mid = 4;
-  int32 high = 5;
+  uint64 low = 3;
+  uint64 mid = 4;
+  uint64 high = 5;
+  uint64 partialValue = 6;
+  uint64 finalValue = 7;
 }
 
 message CreateTokenRequest {

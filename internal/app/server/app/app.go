@@ -5,6 +5,7 @@ import (
 	"github.com/hiteshrepo/token_project/internal/app/server/handler"
 	tokenv1 "github.com/hiteshrepo/token_project/internal/pkg/proto"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 	"log"
 	"net"
 )
@@ -25,6 +26,7 @@ func (app *App) Start(checkErr func(err error)) {
 }
 
 func (app *App) registerServers() {
+	reflection.Register(app.Server)
 	tokenv1.RegisterTokenServiceServer(app.Server, app.TickHandler)
 }
 
